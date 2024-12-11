@@ -3,7 +3,8 @@
 def main():
 
     from flask import Flask
-    import conf.main_config
+
+    import conf.server
 
     app = Flask(__name__)
 
@@ -12,8 +13,8 @@ def main():
         return "<p>Hello, World!</p>"
 
     app.run(
-        host=conf.main_config.HOST,
-        port=conf.main_config.PORT,
+        host=conf.server.HOST,
+        port=7373,
         debug=True,
     )
 
